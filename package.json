@@ -5,11 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --base-href /hungry-app/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
