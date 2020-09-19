@@ -2,16 +2,16 @@
   <div class="form-container">
     <form #hungryForm="ngForm" (ngSubmit)="onSubmit()" [ngClass]="{'submitted':hungryForm.submitted}">
       <div class="form-group row form-row">
-        <label for="dishes" class="col-sm-auto col-form-label">Dishes</label>
-        <div class="col-sm-auto">
+        <label for="dishes" class="col-md-auto col-sm-2 col-form-label">Dishes</label>
+        <div class="col-md-auto col-sm-10">
           <input type="text" class="form-control" id="dishes" 
           placeholder="Sabzi, Roti, Rice" name="dishes" [(ngModel)]="dishes" (keypress)="message=''"
           #dishNames="ngModel" required>
         </div>
-        <div class="col-sm-auto">
+        <div class="col-md-auto col-sm-4">
           <button type="submit" class="btn btn-primary submit-btn">Check If Too Much</button>
         </div>
-        <div class="col-sm-auto">
+        <div class="col-md-auto col-sm-4">
           <button type="button" class="btn btn-secondary" (click)="onReset();hungryForm.resetForm({dishes:''});">Reset</button>
         </div>
       </div>
